@@ -13,6 +13,6 @@ for port in range(minporta, massporta ):
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM )
 	status = sock.connect_ex((indirizzo_ip, port))
 	if(status == 0):
-		print('*** Port',port,'- OPEN ***',)
+		print('<<< Port',port,'- OPEN >>>',)
 	
 	sock.close()
