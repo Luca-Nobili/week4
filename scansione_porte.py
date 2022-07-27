@@ -1,13 +1,15 @@
 import socket
 
 indirizzo_ip = input('Inserisci indirizzo ip: ')
-porte = input('Inserire un renge di porte: ')
+porte = input('Inserire un range di porte: ')
 
 minporta = int(porte.split('-')[0])
-massporta = int(porte.split('-')[1])+1
+massporta = int(porte.split('-')[1])
 
 
 print('Scansione ip: ', indirizzo_ip, 'Dalla porta', minporta, 'alla porta',massporta)
+
+massporta = int(porte.split('-')[1])+1
 
 for port in range(minporta, massporta ):
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM )
